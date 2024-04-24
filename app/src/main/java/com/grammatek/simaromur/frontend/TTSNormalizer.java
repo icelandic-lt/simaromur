@@ -153,6 +153,9 @@ public class TTSNormalizer {
         // NormDictEntry Db
         String normalized = sentence;
         final HashMap<NormDictEntry, Pattern> entriesMap = App.getAppRepository().getCachedUserDictEntries();
+        if (null == entriesMap)
+            return normalized;
+
         final List<NormDictEntry> entries = new ArrayList<>(entriesMap.keySet());
 
         // sort terms according to their size descendingly to match longer strings first.
