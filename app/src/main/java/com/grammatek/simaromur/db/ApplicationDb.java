@@ -122,7 +122,8 @@ public abstract class ApplicationDb extends RoomDatabase {
             Log.v(LOG_TAG, "MIGRATION_8_9");
             // Remove eventually existing table/index
             database.execSQL("DROP TABLE IF EXISTS norm_dict_table");
-            database.execSQL("CREATE TABLE IF NOT EXISTS norm_dict_table (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `term` TEXT NOT NULL, `replacement` TEXT NOT NULL)");
+            database.execSQL("CREATE TABLE IF NOT EXISTS norm_dict_table (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `term` TEXT, `replacement` TEXT)");
+            database.execSQL("CREATE UNIQUE INDEX IF NOT EXISTS index_norm_dict_table_term ON norm_dict_table (term ASC)");
         }
     };
 

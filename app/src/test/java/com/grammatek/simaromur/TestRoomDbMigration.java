@@ -154,6 +154,22 @@ public class TestRoomDbMigration {
         db.close();
         testHelper.runMigrationsAndValidate(TEST_DB_NAME, 8, true, ApplicationDb.MIGRATION_7_8);
     }
+
+    @Test
+    public void migrationFrom8To9() throws IOException {
+        // Create the database in version 8, then migrate to 9
+        SupportSQLiteDatabase db =
+                testHelper.createDatabase(TEST_DB_NAME, 8);
+        db.execSQL("INSERT INTO app_data_table VALUES (1, '8', 2, 'today', 1, 1)");
+
+        db.execSQL("INSERT INTO voice_table VALUES (1, 'Álfur', 'male', 'Alfur', 'is-IS', 'Íslenska(icelandic)'," +
+                " '', 'network', 'now', 'now', 'http://someurl', 'downloadpath', 'API1', 'nomd5sum', 0)");
+        db.execSQL("INSERT INTO voice_table VALUES (2, 'Steinn', 'male', 'stein_vits_onnx_xs_ipa', 'isl-ISL', 'Íslenska'," +
+                " 'Steinn', 'onnx', 'now', 'now', 'assets', 'is-steinn-xs-ipa.onnx is-steinn-xs-ipa.onnx.json', '0.5', '31a565683d0927cb8a39d5f80ebd85c1', 0)");
+        db.close();
+        testHelper.runMigrationsAndValidate(TEST_DB_NAME, 9, true, ApplicationDb.MIGRATION_8_9);
+    }
+
     @Test
     public void TestDBV2() throws IOException {
         // Create DB in V2
@@ -270,6 +286,21 @@ public class TestRoomDbMigration {
         db.execSQL("INSERT INTO app_data_table VALUES (1, '8', 1, 'now', 1, 1)");
         db.execSQL("UPDATE app_data_table SET privacy_info_dialog_accepted = 0, crash_lytics_user_consent_accepted = 0 WHERE appDataId = 1");
 
+        db.close();
+    }
+
+    @Test
+    public void TestDBV9() throws IOException {
+        // Create DB in V9
+        SupportSQLiteDatabase db =
+                testHelper.createDatabase(TEST_DB_NAME, 9);
+
+        db.execSQL("INSERT INTO voice_table VALUES (1, 'Steinn', 'male', 'stein_vits_onnx_xs_ipa', 'isl-ISL', 'Íslenska'," +
+                " 'Steinn', 'onnx', 'now', 'now', 'assets', 'is-steinn-xs-ipa.onnx is-steinn-xs-ipa.onnx.json', '0.5', '31a565683d0927cb8a39d5f80ebd85c1', 0)");
+
+        db.execSQL("INSERT INTO app_data_table VALUES (1, '8', 1, 'now', 1, 1)");
+        db.execSQL("UPDATE app_data_table SET privacy_info_dialog_accepted = 0, crash_lytics_user_consent_accepted = 0 WHERE appDataId = 1");
+        db.execSQL("INSERT INTO norm_dict_table VALUES (1, 't.d.', 'til dæmis')");
         db.close();
     }
 }
