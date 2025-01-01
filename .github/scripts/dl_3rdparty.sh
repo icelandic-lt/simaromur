@@ -22,10 +22,10 @@ echo "Using OPENFST_TAG: $OPENFST_TAG"
 echo "Using THRAX_TAG: $THRAX_TAG"
 
 # Download release infos
-OPENFST_URL=https://api.github.com/repos/grammatek/openfst/releases
+OPENFST_URL=https://api.github.com/repos/icelandic-lt/openfst/releases
 OPENFST_REL_JSON=$(curl -sH "Accept: application/vnd.github.v3+json" "$OPENFST_URL")
 
-THRAX_URL=https://api.github.com/repos/grammatek/thrax/releases
+THRAX_URL=https://api.github.com/repos/icelandic-lt/thrax/releases
 THRAX_REL_JSON=$(curl -sH "Accept: application/vnd.github.v3+json" "$THRAX_URL")
 
 # Checks given version against version in given json string
