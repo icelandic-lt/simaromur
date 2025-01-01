@@ -20,7 +20,7 @@ jobs:
         run: |
           TMP_KEYSTORE_FILE_PATH="${RUNNER_TEMP}"/keystore
           mkdir -p "${TMP_KEYSTORE_FILE_PATH}"
-          echo "$ENCODED_KS" | base64 -di > "${TMP_KEYSTORE_FILE_PATH}"/simaromur_ks.jks
+          echo "$ENCODED_KS" | base64 -d > "${TMP_KEYSTORE_FILE_PATH}"/simaromur_ks.jks
           ls -al "${TMP_KEYSTORE_FILE_PATH}"
       - name: set up JDK
         uses: actions/setup-java@v3
