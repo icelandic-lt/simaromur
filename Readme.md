@@ -22,7 +22,8 @@
 This project provides an Icelandic TTS application for the Android TTS service. The current state of the project is *production-ready*.
 
 The app is available on
-[![Google Play](doc/google_play.png)](https://play.google.com/store/apps/details?id=com.grammatek.simaromur).
+[<img src="doc/google_play.png" alt="Google Play">](https://play.google.com/store/apps/details?id=com.grammatek.simaromur)
+
 
 Please note that the Google Play version is provided by [Grammatek ehf](https://www.grammatek.com) and has an improved UI as well as improved text normalization and pronunciation dictionary.
 
