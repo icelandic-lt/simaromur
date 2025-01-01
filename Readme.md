@@ -21,10 +21,10 @@
 
 This project provides an Icelandic TTS application for the Android TTS service. The current state of the project is *production-ready*.
 
-<table border="0">
+<table style="border:none; border-collapse:collapse;">
 <tr>
-<td>The app is available on</td>
-<td><a href="https://play.google.com/store/apps/details?id=com.grammatek.simaromur"><img src="doc/google_play.png" alt="Google Play"></a></td>
+<td style="border:none; padding:0;">The app is available on</td>
+<td style="border:none; padding:0;"><a href="https://play.google.com/store/apps/details?id=com.grammatek.simaromur"><img src="doc/google_play.png" alt="Google Play"></a></td>
 </tr>
 </table>
 
