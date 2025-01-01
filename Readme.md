@@ -3,7 +3,7 @@
 ![Version](https://img.shields.io/badge/Version-M12-darkviolet)
 ![Java](https://img.shields.io/badge/Java-11-blue?logo=python&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-17-blue?logo=python&logoColor=white)
-![CI Status](https://github.com/github/docs/actions/workflows/build.yml/badge.svg)
+![CI Status](https://github.com/icelandic-lt/simaromur/actions/workflows/build.yml/badge.svg)
 ![Docker](https://img.shields.io/badge/Docker-[unavailable]-red)
 
 ## Overview
@@ -11,8 +11,8 @@
 - **Domain:** Android Mobile
 - **Languages:** Java, C++
 - **Language Version/Dialect:** 
-  - C++: C++17
-  - Java: Java 11
+  - C++: 17
+  - Java: 11
 - **Audience**: Developers, Researchers, End-Users
 - **Origin:** [GitHub](https://www.github.com/grammatek(simaromur))
 
@@ -21,7 +21,8 @@
 
 This project provides an Icelandic TTS application for the Android TTS service. The current state of the project is *production-ready*.
 
-The app is available on the [Google Play Store](https://play.google.com/store/apps/details?id=com.grammatek.simaromur).
+The app is available on
+[![Google Play](doc/google_play.png)](https://play.google.com/store/apps/details?id=com.grammatek.simaromur).
 
 Please note that the Google Play version is provided by [Grammatek ehf](https://www.grammatek.com) and has an improved UI as well as improved text normalization and pronunciation dictionary.
 
