@@ -14,7 +14,7 @@
   - C++: 17
   - Java: 11
 - **Audience**: Developers, Researchers, End-Users
-- **Origin:** [GitHub](https://www.github.com/grammatek(simaromur))
+- **Origin:** [GitHub](https://www.github.com/grammatek/simaromur)
 
 ## Status
 ![Production](https://img.shields.io/badge/Production-darkgreen)
