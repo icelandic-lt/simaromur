@@ -7,7 +7,7 @@ The app is available on the [Google Play Store](https://play.google.com/store/ap
 
 ## Voices
 
-Símarómur provides access to neural network [on-device voices](https://github.com/grammatek/simaromur_voices)
+Símarómur provides access to neural network [on-device voices](https://github.com/icelandic-lt/simaromur_voices)
 that are bundled via assets.
 
 Currently, there is one male voice available, named **Steinn**. This voice is not only highly intelligible
@@ -34,7 +34,7 @@ dictionary is not supported.
 ## Text Normalization & G2P
 
 Icelandic text normalization is performed before the text enters G2P.
-Local voice G2P is [rule-based](https://github.com/grammatek/g2p-thrax) and is implemented using the C++
+Local voice G2P is [rule-based](https://github.com/icelandic-lt/g2p-thrax) and is implemented using the C++
 frameworks Thrax & OpenFST, which are accessed via JNI.
 
 ## New since version 2.x
@@ -48,8 +48,8 @@ The neural network model is based on [VITS](https://github.com/jaywalnut310/vits
 
 ## Build Prerequisites
 
-This project uses our versions of [OpenFST](https://github.com/grammatek/openfst) &
-[Thrax](https://github.com/grammatek/thrax) with the appropriate fixes to build for Android inside
+This project uses our versions of [OpenFST](https://github.com/icelandic-lt/openfst) &
+[Thrax](https://github.com/icelandic-lt/thrax) with the appropriate fixes to build for Android inside
 the branch `android`. Please build & install these first, before compiling Símarómur.
 
 ### Using prebuilt libraries from github releases
@@ -102,11 +102,11 @@ inside Android Studio.
 ## Contributing
 
 You can contribute to this project by forking it, creating a branch and opening a new
-[pull request](https://github.com/grammatek/simaromur/pulls).
+[pull request](https://github.com/icelandic-lt/simaromur/pulls).
 
 ## License
 
-All code is Copyright © 2021-2024 Grammatek ehf. This code is licensed under the [Apache License](LICENSE-APACHE2).
+All code is Copyright © 2021-2025 Grammatek ehf. This code is licensed under the [Apache License](LICENSE-APACHE2).
 
 ## Acknowledgements
 We use the 3rdparty libraries [Sonic](https://github.com/waywardgeek/sonic) for audio speed and pitch manipulation.
