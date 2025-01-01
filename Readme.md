@@ -23,7 +23,7 @@ This project provides an Icelandic TTS application for the Android TTS service. 
 
 <table style="border:none; border-collapse:collapse;">
 <tr>
-<td style="border:none; padding:0;">The app is available on</td>
+<td style="border:none; padding:0;">Símarómur is available on</td>
 <td style="border:none; padding:0;"><a href="https://play.google.com/store/apps/details?id=com.grammatek.simaromur"><img src="doc/google_play.png" alt="Google Play" width="150"></a></td>
 </tr>
 </table>
